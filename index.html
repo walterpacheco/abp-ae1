@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Gestión de Proyectos</title>
+</head>
+<body>
+    <h1>Registro de Proyecto</h1>
+    <form id="formulario-proyecto">
+        <label>Nombre del Proyecto:</label>
+        <input type="text" id="nombreProyecto"><br>
+        <label>Nombre del Trabajador:</label>
+        <input type="text" id="nombreTrabajador"><br>
+        <label>RUT:</label>
+        <input type="text" id="rutTrabajador"><br>
+        <label>Cargo:</label>
+        <input type="text" id="cargoTrabajador"><br>
+        <button type="button" onclick="registrarProyecto()">Registrar Proyecto</button>
+    </form>
+
+    <h2>Proyectos Registrados</h2>
+    <table border="1" id="tablaProyectos">
+        <thead>
+            <tr>
+                <th>Nombre del Proyecto</th>
+                <th>Nombre del Trabajador</th>
+                <th>RUT del Trabajador</th>
+                <th>Cargo del Trabajador</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Las filas se agregarán aquí dinámicamente -->
+        </tbody>
+    </table>
+    <!-- Incluir los scripts en el orden correcto -->
+    <script src="/assets/js/trabajador.js"></script>
+    <script src="/assets/js/proyecto.js"></script>
+    <script src="/assets/js/main.js"></script>
+</body>
+</html>
