@@ -1,7 +1,6 @@
-// proyecto.js
 
 // Función constructora para Proyecto
-function Proyecto(nombreProyecto, trabajadores) {
+export function Proyecto(nombreProyecto, trabajadores) {
     this.nombreProyecto = nombreProyecto;
     this.trabajadores = trabajadores || []; // Array de Trabajadores
 }

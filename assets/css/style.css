@@ -1,0 +1,9 @@
+body{
+    background-image: url('/assets/img/skyscrapers-3184798_1280.jpg');
+}
+h1 , h2,label{
+    text-align: center;
+    margin-top: .875rem;
+    margin-bottom: .9375rem;
+    color: white !important;
+}

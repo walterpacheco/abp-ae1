@@ -1,18 +1,19 @@
-// main.js
+import { Trabajador } from './trabajador.js';
+import { Proyecto } from './proyecto.js';
 
 // Función para validar que un texto solo contenga letras y espacios
-function validarSoloLetras(texto) {
+export function validarSoloLetras(texto) {
     var regex = /^[a-zA-Z\s]+$/;
     return regex.test(texto);
 }
 
 // Función para validar que un RUT solo contenga números y la letra K
-function validarRut(rut) {
+export function validarRut(rut) {
     var regex = /^[0-9]+[kK]?$/;
     return regex.test(rut);
 }
 
-function registrarProyecto() {
+export function registrarProyecto() {
     var nombreProyecto = document.getElementById('nombreProyecto').value;
     var nombreTrabajador = document.getElementById('nombreTrabajador').value;
     var rutTrabajador = document.getElementById('rutTrabajador').value;
@@ -47,7 +48,7 @@ function registrarProyecto() {
     document.getElementById('formulario-proyecto').reset();
 }
 
-function agregarProyectoATabla(proyecto, trabajador) {
+export function agregarProyectoATabla(proyecto, trabajador) {
     var tabla = document.getElementById('tablaProyectos').getElementsByTagName('tbody')[0];
     var nuevaFila = tabla.insertRow();
 
@@ -58,8 +59,8 @@ function agregarProyectoATabla(proyecto, trabajador) {
 
     celdaProyecto.innerHTML = proyecto.getNombreProyecto(); // Asegúrate de que esta línea llame al método correctamente
     celdaTrabajador.innerHTML = trabajador.getNombre();
-    celdaRut.innerHTML = trabajador.rut;
-    celdaCargo.innerHTML = trabajador.cargo;
+    celdaRut.innerHTML = trabajador.getRut();
+    celdaCargo.innerHTML = trabajador.getCargo();
 }
 
 document.addEventListener('DOMContentLoaded', () => {

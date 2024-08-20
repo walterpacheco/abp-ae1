@@ -1,7 +1,6 @@
-// trabajador.js
 
 // Función constructora para Trabajador
-function Trabajador(nombre, rut, cargo) {
+export function Trabajador(nombre, rut, cargo) {
     this.nombre = nombre;
     this.rut = rut;
     this.cargo = cargo;
